@@ -63,4 +63,4 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-For each of these variables we have keep only the mean and standard deviation of these signals.
+For each of these variables we have keep only the mean and standard deviation of these signals.  The units for the time domain variables is seconds and Hertz for the frequency domain variables.
