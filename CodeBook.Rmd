@@ -1,0 +1,66 @@
+---
+title: "Codebook template"
+author: "M. Wiltberger"
+date: "23 May 2015"
+output:
+  html_document:
+    keep_md: yes
+---
+ 
+## Project Description
+This codebook describes the processing of the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) to produce a tidy dataset for the Coursera [Getting and Cleaning Data Class](https://www.coursera.org/course/getdata).
+ 
+##Study design and data processing
+ 
+###Collection of the raw data
+According to UCI Website the data set was produced by a set of 30 volunteers who wore a Samsung Galaxy S II smartphone on their waist for a series of tests. Each person performed six activites  (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) and video-recorded.  The obtained dataset was randomly partitioned into two sets with 70% in the trainning category and 30% in the test category.
+ 
+##Creating the tidy datafile
+ 
+###Guide to create the tidy data file
+The steps for creating the tidy data file are straightforward.  First download the data set from the Coursea Getting and Cleaning Data Class.  Unzip the file into a directory of your choice.  Within R set the working directory to the directory you unziped the file and then source the run\_analysis.R file.  Running the run\_analysis.F function will create the activity-tidy.txt file.
+ 
+###Cleaning of the data
+The cleaning code combines the test and training data sets. It then calculates the mean for all of the mean and std measurements for each subject and activity.  [A detailed descripting of the code cleaning process can be found in the README.md file for this repository]()
+ 
+##Description of the variables in the activity-tidy.txt file
+The data set includes mean values for the 30 subjects for each of the 6 activities for a total of 180 observations.  There 88 variables for each observations.  The details of the varibles can be found in the README.txt file distributed with the UCI dataset.  Relevant information from that file has been copied here for completeness
+
+###Feature Selection
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
+
+These signals were used to estimate variables of the feature vector for each pattern:
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+* gravityMean
+* tBodyAccMean
+* tBodyAccJerkMean
+* tBodyGyroMean
+* tBodyGyroJerkMean
+
+For each of these variables we have keep only the mean and standard deviation of these signals.
