@@ -16,3 +16,6 @@ This code uses the capabilities of the dplyr package to accomplish most of the r
 After the files are loaded the cbind function is used to combine the X, Y, subject data into a single dataframe for the test and train data sets.  The rbind function combines the test and train data sets into a single dataframe.  The names for the columns in the dataframe are set with information loaded from the features.txt file along with ActivityType and Subject for the last two columns. Using the select function from dpylr library only the mean and std measurements along with ActivityType and Subject are selected.  The ActivityType integers are then replaced with the labels loaded from the activity_labels.txt file using the mutate capability of the dplyr library.  
 
 Now that we have a dataframe with the desired quantities we can proceed with reducing the data set.  Using the group_by function of the dplyr library the data set is first grouped by activity type and then by subject.  For each of these observations the summerise_each function is used to compute the mean of the observations.  The write.table function with row.names=FALSE is used to produce the tidy data set file called activity-tidy.txt in the current working directory.
+
+NB - This code could likely be made more efficent by using the %>% operater.
+

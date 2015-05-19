@@ -21,7 +21,7 @@ According to UCI Website the data set was produced by a set of 30 volunteers who
 The steps for creating the tidy data file are straightforward.  First download the data set from the Coursea Getting and Cleaning Data Class.  Unzip the file into a directory of your choice.  Within R set the working directory to the directory you unziped the file and then source the run\_analysis.R file.  Running the run\_analysis.F function will create the activity-tidy.txt file.
  
 ###Cleaning of the data
-The cleaning code combines the test and training data sets. It then calculates the mean for all of the mean and std measurements for each subject and activity.  [A detailed descripting of the code cleaning process can be found in the README.md file for this repository]()
+The cleaning code combines the test and training data sets. It then calculates the mean for all of the mean and std measurements for each subject and activity.  [A detailed descripting of the code cleaning process can be found in the README.md file for this repository](https://github.com/wiltbemj/GetClean-Data/blob/master/README.md)
  
 ##Description of the variables in the activity-tidy.txt file
 The data set includes mean values for the 30 subjects for each of the 6 activities for a total of 180 observations.  There 88 variables for each observations.  The details of the varibles can be found in the README.txt file distributed with the UCI dataset.  Relevant information from that file has been copied here for completeness
